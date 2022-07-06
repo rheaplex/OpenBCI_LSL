@@ -29,9 +29,10 @@ def main(argv):
   # if no arguments are provided, default to the GUI application
   if not argv:
     import lib.gui as gui
-    from PyQt4 import QtGui
-    app = QtGui.QApplication(sys.argv)
+    from PyQt5 import QtWidgets
+    app = QtWidgets.QApplication(sys.argv)
     window = gui.GUI()
+    window.show()
     sys.exit(app.exec_())
  
   # if user specifies CLI using the "--stream" argument, check if a port is also specified
